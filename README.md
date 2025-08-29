@@ -56,7 +56,27 @@ yarn install
 pnpm install
 ```
 
-### 3. Run the development server
+### 3. Setup Regolo.ai API Key
+
+To use REgoloFACTOR with the qwen3-coder-30B model, you need to configure your Regolo.ai API key:
+
+Copy .env.example to .env.local in the project root.
+
+```sh
+cp .env.example .env.local
+```
+
+Open `.env.local` and insert your Regolo.ai API key.
+
+Example:
+
+```
+REGOLO_API_KEY=your_api_key_here
+```
+
+👉 You can start creating an account and generating API keys at https://regolo.ai.
+
+### 4. Run the development server
 
 ```sh
 npm run dev
@@ -70,7 +90,7 @@ The app will be available at:
 
 👉 http://localhost:3000
 
-### 4. Build for production
+### 5. Build for production
 
 ```sh
 npm run build
