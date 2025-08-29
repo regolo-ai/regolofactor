@@ -9,10 +9,10 @@ type RefactorRequest = {
 };
 
 const prompts: Record<RefactorMode, string> = {
-  readability: `You are RegoloFactor AI. Refactor code with the following goal: Refactor for Readability. Simplify complex expressions, improve variable names, reduce nested logic, and enhance code clarity without altering functionality. Only return valid code. Do not explain, only output code.`,
-  performance: `You are RegoloFactor AI. Refactor code with the following goal: Refactor for Performance. Optimize algorithms, reduce time/space complexity, minimize redundant operations, and eliminate bottlenecks. Only return valid code. Do not explain, only output code.`,
+  readability: `You are RegoloFactor AI. Refactor code with the following goal: Refactor for Readability. Simplify complex expressions, improve variable names, reduce nested logic, and enhance code clarity without altering functionality. Only return valid code. Do not use markdown wrappers. Do not explain, only output code.`,
+  performance: `You are RegoloFactor AI. Refactor code with the following goal: Refactor for Performance. Optimize algorithms, reduce time/space complexity, minimize redundant operations, and eliminate bottlenecks. Only return valid code. Do not use markdown wrappers. Do not explain, only output code.`,
   idiomatic: `You are RegoloFactor AI. Refactor code with the following goal: Refactor for Idiomatic. Use standard library patterns, follow language conventions, eliminate anti-patterns, and ensure code aligns with community best practices. Only return valid code. Do not use markdown wrappers. Do not explain, only output code.`,
-  modularization: `You are RegoloFactor AI. Refactor code with the following goal: Refactor for Modularization. Split monolithic code into smaller, reusable functions/classes, reduce duplication, and improve maintainability through clear separation of concerns. Only return valid code. Do not explain, only output code.`,
+  modularization: `You are RegoloFactor AI. Refactor code with the following goal: Refactor for Modularization. Split monolithic code into smaller, reusable functions/classes, reduce duplication, and improve maintainability through clear separation of concerns. Only return valid code. Do not use markdown wrappers. Do not explain, only output code.`,
 };
 
 export async function POST(req: Request) {
