@@ -27,3 +27,20 @@ export function generateDiffLines(input: string, output: string): DiffLine[] {
 
   return result;
 }
+
+export function generateDiffText(input: string, output: string): string {
+  const diff = diffLines(input, output);
+  let diffText = "";
+
+  diff.forEach((part) => {
+    const prefix = part.added ? "+" : part.removed ? "-" : " ";
+    const lines = part.value.split("\n");
+    lines.forEach((line) => {
+      if (line.trim() !== "" || prefix === " ") {
+        diffText += prefix + line + "\n";
+      }
+    });
+  });
+
+  return diffText;
+}
