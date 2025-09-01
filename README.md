@@ -101,13 +101,13 @@ npm run start
 
 ## ⚙️ API Endpoint
 
-The app expects an API endpoint at:
+The app initialize an API endpoint at:
 
 ```
 /api/refactor
 ```
 
-It should accept a `POST` request with a JSON payload:
+It accept a `POST` request with a JSON payload:
 
 ```json
 {
@@ -116,8 +116,7 @@ It should accept a `POST` request with a JSON payload:
 }
 ```
 
-and return the refactored code as a **stream**.  
-(Example implementation would depend on the AI service you are connecting to.)
+and return the refactored code as a **stream**.
 
 ---
 
