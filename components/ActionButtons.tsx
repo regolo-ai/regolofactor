@@ -34,7 +34,7 @@ export default function ActionButtons({
       <button
         onClick={onCopy}
         disabled={disabled}
-        className="px-3 py-1 bg-gray-700 hover:bg-gray-600 text-white text-sm rounded-md disabled:opacity-40 transition cursor-pointer"
+        className="px-3 py-1 bg-gray-700 hover:bg-gray-600 text-white text-sm rounded-md disabled:opacity-40 transition cursor-pointer hidden md:block"
       >
         {copied ? "✅ Copied!" : "📋 Copy"}
       </button>
